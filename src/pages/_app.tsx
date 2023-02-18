@@ -1,6 +1,13 @@
-import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
+import '@/scss/global.scss'
+import ViewportProvider from '@/context/ViewportContext'
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+const App = ({ Component, pageProps }: AppProps) => {
+  return (
+    <ViewportProvider>
+      <Component {...pageProps} />
+    </ViewportProvider>
+  )
 }
+
+export default App

@@ -1,0 +1,21 @@
+.container {
+  padding: 0 1em;
+  max-width: 25em;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include tablet {
+    padding: 0 3rem;
+    max-width: unset;
+    margin-left: unset;
+    margin-right: unset;
+  }
+
+  @include desktop {
+    padding: 0 4rem;
+  }
+
+  display: grid;
+  width: 100%;
+  height: 100%;
+}

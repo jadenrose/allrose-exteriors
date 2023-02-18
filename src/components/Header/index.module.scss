@@ -1,0 +1,32 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+
+  display: initial;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0;
+}
+
+.logo {
+  width: 10em;
+
+  @include desktop {
+    width: 13em;
+  }
+
+  img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+  }
+}

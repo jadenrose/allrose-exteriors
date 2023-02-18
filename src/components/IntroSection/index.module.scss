@@ -1,0 +1,46 @@
+.introSection {
+  @include pv-universal;
+}
+
+.content {
+  @include tablet {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 4em;
+  }
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    gap: 4em;
+  }
+
+  p {
+    max-width: 70ch;
+
+    @include tablet {
+      font-size: 0.9rem;
+    }
+
+    @include desktop {
+      font-size: 1rem;
+    }
+  }
+}
+
+.title {
+  color: $accent;
+  font-size: 2rem;
+
+  margin-bottom: 2rem;
+
+  @include tablet {
+    font-size: 1.7rem;
+    margin-bottom: unset;
+  }
+
+  @include desktop {
+    font-size: 2rem;
+    margin-bottom: unset;
+  }
+}

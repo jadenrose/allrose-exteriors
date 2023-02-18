@@ -1,0 +1,101 @@
+.footer {
+  padding: 6em 0;
+  background: white;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.content {
+  padding-left: 3em;
+  padding-right: 3em;
+
+  h4 {
+    font-size: 1.25rem;
+    color: $accent;
+    margin-bottom: 1em;
+  }
+
+  p:not(:last-of-type) {
+    margin-bottom: 0.5em;
+  }
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    gap: 4em;
+    padding-left: unset;
+    padding-right: unset;
+
+    h4 {
+      font-size: 1rem;
+      margin-bottom: 1em;
+    }
+
+    p,
+    li {
+      font-size: 0.8rem;
+    }
+  }
+
+  @include desktop {
+    gap: 10em;
+
+    p,
+    li {
+      font-size: 1rem;
+    }
+  }
+}
+
+.logo {
+  width: 15em;
+  flex: 0 0 20%;
+
+  margin-bottom: 2em;
+
+  @include tablet {
+    margin-bottom: unset;
+  }
+
+  img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+.contactAndHours {
+  flex: 0 1 40%;
+}
+
+.contactInfo {
+  margin-bottom: 4em;
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+}
+
+.businessHours {
+  margin-bottom: 4em;
+
+  @include tablet {
+    margin-bottom: unset;
+  }
+}
+
+.serviceArea {
+  flex: 0 1 40%;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.3em;
+    max-height: 12em;
+    margin: 0;
+    padding: 0;
+    padding-left: 1.2em;
+  }
+}

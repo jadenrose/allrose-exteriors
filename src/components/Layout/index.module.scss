@@ -1,0 +1,22 @@
+.layout {
+  color: $fc-primary;
+
+  text-align: center;
+
+  @include tablet {
+    text-align: left;
+  }
+}
+
+.main {
+  padding-top: 4em;
+
+  @include desktop {
+    padding-top: 5em;
+  }
+
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}

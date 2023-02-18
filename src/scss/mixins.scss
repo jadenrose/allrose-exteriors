@@ -1,0 +1,21 @@
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin pv-universal {
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  @include desktop {
+    padding-top: 6em;
+    padding-bottom: 6em;
+  }
+}

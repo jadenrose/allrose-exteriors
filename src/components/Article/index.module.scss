@@ -1,0 +1,83 @@
+.article {
+  position: relative;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+
+  @include pv-universal;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    background: $light-grey;
+    text-align: right;
+    padding-top: unset;
+    padding-bottom: unset;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    align-self: center;
+    border-radius: 0.5em 0 0 0.5em;
+
+    @include tablet {
+      position: initial;
+      top: unset;
+      left: unset;
+      height: unset;
+      z-index: initial;
+      height: auto;
+    }
+  }
+}
+
+.content {
+  @include pv-universal;
+
+  h2 {
+    font-size: 2.5rem;
+    color: $accent;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+
+    &:last-of-type {
+      margin-bottom: 4rem;
+    }
+  }
+
+  button,
+  a {
+    font-size: 1.5rem;
+  }
+
+  @include tablet {
+    align-self: center;
+    text-align: left;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  @include desktop {
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}

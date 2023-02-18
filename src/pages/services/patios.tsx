@@ -6,8 +6,8 @@ import { GetStaticProps } from 'next'
 import { ApolloError } from '@apollo/client/errors'
 import { ServerError } from '@apollo/client/link/utils'
 
-const Home = ({ page }: { page: Page }) => {
-  if (page) return <Layout {...page} heroStyle="primary" />
+const Patios = ({ page }: { page: Page }) => {
+  if (page) return <Layout {...page} />
 
   return null
 }
@@ -19,7 +19,7 @@ export const getStaticProps: GetStaticProps = async () => {
     } = await client.query({
       query: PAGE_QUERY,
       variables: {
-        id: 'cle689v4ubpmc0bsnh9pg8g01',
+        id: 'cle6a828vbwl10bu1ie0w5rzs',
       },
     })
 
@@ -39,4 +39,4 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-export default Home
+export default Patios

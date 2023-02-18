@@ -1,0 +1,68 @@
+.brandingSection {
+  @include pv-universal;
+}
+
+.brandingCards {
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+  }
+
+  @include desktop {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+  }
+}
+
+.brandingItem {
+  width: 11em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+
+  @include tablet {
+    width: 9em;
+    margin-left: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+  }
+
+  @include desktop {
+    width: 15%;
+  }
+}
+
+.subtitle {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.brandingCard {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 1em;
+  }
+}

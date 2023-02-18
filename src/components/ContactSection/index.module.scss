@@ -1,0 +1,83 @@
+.contactSection {
+  @include pv-universal;
+
+  background: $light-grey;
+  text-align: center;
+
+  h2 {
+    color: $accent;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    color: $accent;
+  }
+
+  @include desktop {
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+  }
+}
+
+.contactInformation {
+  background: white;
+  display: inline-block;
+  margin: 0 auto;
+  border-radius: 1rem;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  padding: 1em;
+  margin-bottom: 3rem;
+
+  @include desktop {
+    padding: 4em;
+    margin-bottom: 4rem;
+  }
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: inherit;
+
+  &:not(:last-child) {
+    margin-bottom: 2em;
+  }
+
+  gap: 1em;
+
+  p {
+    font-size: 1rem;
+  }
+
+  img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  @include desktop {
+    &:not(:last-child) {
+      margin-bottom: 4em;
+    }
+
+    gap: 2em;
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    img {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+}

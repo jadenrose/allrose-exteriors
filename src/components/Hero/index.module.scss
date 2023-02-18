@@ -1,0 +1,211 @@
+.bgImageWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  @include tablet {
+    position: initial;
+    top: unset;
+    left: unset;
+    width: unset;
+    height: unset;
+    z-index: initial;
+  }
+
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+
+    @include tablet {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+}
+
+.hero.primary {
+  position: relative;
+
+  .overlay {
+    @include tablet {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .content {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(3px);
+    border-radius: 2px;
+    align-self: center;
+    padding: 6em 1.5em;
+
+    @include tablet {
+      padding: 2rem;
+      width: 60%;
+    }
+
+    @include desktop {
+      padding: 3rem;
+      width: 50%;
+    }
+
+    button,
+    a {
+      font-size: 1.5rem;
+      width: 100%;
+
+      @include tablet {
+        width: unset;
+        font-size: 1.7rem;
+      }
+
+      @include desktop {
+        width: unset;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: $accent;
+    line-height: 0.9;
+
+    @include tablet {
+      font-size: 2.5rem;
+    }
+
+    @include desktop {
+      font-size: 3.5rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+
+      @include desktop {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 5rem;
+
+    @include tablet {
+      font-size: 1.25rem;
+      margin-bottom: 3rem;
+    }
+
+    @include desktop {
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.hero.secondary {
+  position: relative;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
+    align-items: center;
+
+    @include pv-universal;
+
+    padding: 3em 1em;
+
+    @include tablet {
+      align-items: flex-start;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    h1 {
+      font-size: 2rem;
+      line-height: 1.1;
+      color: $accent;
+      margin-bottom: 1rem;
+
+      @include tablet {
+        margin-bottom: 2rem;
+      }
+
+      @include desktop {
+        margin-bottom: 3rem;
+      }
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+
+      @include tablet {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    p {
+      margin-bottom: 1rem;
+
+      @include tablet {
+        margin-bottom: 3rem;
+      }
+
+      a {
+        font-size: unset;
+        color: $accent;
+      }
+    }
+
+    button,
+    a {
+      font-size: 1.25rem;
+      width: 100%;
+
+      @include tablet {
+        width: unset;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .bgImageWrapper {
+    height: 100%;
+
+    @include tablet {
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+
+      img {
+        border-radius: 1em 0 0 1em;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.gallery {
+  @include pv-universal;
+  background: $light-grey;
+}
+
+.title {
+  font-size: 2rem;
+  color: $accent;
+  margin-bottom: 4rem;
+}
+
+.galleryItem {
+  background: white;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 1em;
+  overflow: hidden;
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    align-items: center;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 6em;
+  }
+}
+
+.text {
+  padding: 2em 1em;
+
+  @include desktop {
+    padding: 4em;
+  }
+
+  h3 {
+    font-size: 2rem;
+    color: $accent;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+}

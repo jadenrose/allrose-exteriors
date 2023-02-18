@@ -1,0 +1,41 @@
+.button {
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-decoration: inherit;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2em;
+
+  font-weight: 700;
+
+  img {
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
+
+.text {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.primary {
+  background: $accent;
+  color: white;
+  padding: 0.5em 0.8em;
+  border-radius: 2px;
+
+  &:hover {
+    background: darken($color: $accent, $amount: 5);
+  }
+}
