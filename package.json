@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@next/font": "13.1.6",
+    "@vercel/analytics": "^1.0.1",
     "dotenv": "^16.0.3",
     "graphql": "^16.6.0",
     "html-react-parser": "^3.0.9",
