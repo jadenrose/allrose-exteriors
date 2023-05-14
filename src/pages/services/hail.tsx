@@ -1,10 +1,7 @@
 import Layout from '@/components/Layout'
-import { PAGE_QUERY } from '@/graphql'
-import client from '@/graphql/client'
 import { Page } from '@/__generated__/graphql'
 import { GetStaticProps } from 'next'
-import { ApolloError } from '@apollo/client/errors'
-import { ServerError } from '@apollo/client/link/utils'
+import content from '@/data/content'
 
 const Hail = ({ page }: { page: Page }) => {
   if (page) return <Layout {...page} />
@@ -13,29 +10,8 @@ const Hail = ({ page }: { page: Page }) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  try {
-    const {
-      data: { page },
-    } = await client.query({
-      query: PAGE_QUERY,
-      variables: {
-        id: 'cle6a8feebxx40au2qk2io9gg',
-      },
-    })
-
-    return {
-      props: { page },
-    }
-  } catch (err) {
-    const apolloError = err as ApolloError
-    const networkError = apolloError.networkError as ServerError
-
-    if (networkError.result) console.error(networkError.result)
-    else console.error(err)
-
-    return {
-      props: { page: null },
-    }
+  return {
+    props: { page: content.pages['services/hail'] },
   }
 }
 
