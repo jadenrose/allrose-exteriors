@@ -1,11 +1,10 @@
-import { Gallery } from '@/__generated__/graphql'
 import React from 'react'
 import Container from '../Container'
 import styles from './index.module.scss'
 import parse from 'html-react-parser'
 import HygraphImage from '../HygraphImage'
 
-const Gallery = ({ title, items }: Gallery) => {
+const Gallery = ({ title, items }) => {
   return (
     <section className={styles.gallery}>
       <Container>

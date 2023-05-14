@@ -1,12 +1,9 @@
-import { Hero } from '@/__generated__/graphql'
 import React from 'react'
 import Button from '../Button'
 import Container from '../Container'
 import HygraphImage from '../HygraphImage'
 import styles from './index.module.scss'
 import parse from 'html-react-parser'
-
-export type HeroStyle = 'primary' | 'secondary'
 
 const Hero = ({
   title,
@@ -15,7 +12,7 @@ const Hero = ({
   button,
   backgroundImage,
   heroStyle = 'secondary',
-}: Hero & { heroStyle?: HeroStyle }) => {
+}) => {
   return (
     <section className={`${styles.hero} ${styles[heroStyle]}`}>
       <div className={styles.overlay}>

@@ -1,16 +1,10 @@
-import { CardsSection } from '@/__generated__/graphql'
 import React from 'react'
 import Button from '@/components/Button'
 import styles from './index.module.scss'
 import Container from '../Container'
 import Link from 'next/link'
 
-const CardsSection = ({
-  title,
-  description,
-  cards,
-  miniCards,
-}: CardsSection) => {
+const CardsSection = ({ title, description, cards, miniCards }) => {
   return (
     <section className={styles.cardsSection}>
       <Container>

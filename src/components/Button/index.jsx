@@ -1,20 +1,9 @@
-import { Button } from '@/__generated__/graphql'
 import Link from 'next/link'
 import React from 'react'
 import HygraphImage from '../HygraphImage'
 import styles from './index.module.scss'
 
-type ButtonProps = {
-  appearance?: 'text' | 'primary'
-}
-
-const Button = ({
-  label,
-  prefix,
-  suffix,
-  link,
-  appearance = 'text',
-}: Button & ButtonProps) => {
+const Button = ({ label, prefix, suffix, link, appearance = 'text' }) => {
   const inner = (
     <>
       {prefix && <HygraphImage {...prefix} />}

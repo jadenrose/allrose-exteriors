@@ -1,10 +1,9 @@
-import { BasicContent } from '@/__generated__/graphql'
 import React, { useMemo } from 'react'
 import Container from '@/components/Container'
 import styles from './index.module.scss'
 import parse from 'html-react-parser'
 
-const IntroSection = ({ title, body }: BasicContent) => {
+const IntroSection = ({ title, body }) => {
   const parsed = useMemo(() => {
     if (body?.html) return parse(body.html)
   }, [body?.html])

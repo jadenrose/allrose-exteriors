@@ -1,8 +1,7 @@
 import React from 'react'
-import { Page } from '@/__generated__/graphql'
 import { Roboto_Condensed } from '@next/font/google'
 import Header from '@/components/Header'
-import Hero, { HeroStyle } from '@/components/Hero'
+import Hero from '@/components/Hero'
 import IntroSection from '@/components/IntroSection'
 import CardsSection from '@/components/CardsSection'
 import WhatWeDo from '@/components/WhatWeDo'
@@ -32,7 +31,7 @@ const Layout = ({
   contactSection,
   footer,
   heroStyle,
-}: Page & { heroStyle?: HeroStyle }) => {
+}) => {
   return (
     <div className={styles.layout}>
       <style jsx global>{`

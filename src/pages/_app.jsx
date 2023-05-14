@@ -1,8 +1,7 @@
-import type { AppProps } from 'next/app'
 import '@/scss/global.scss'
 import ViewportProvider from '@/context/ViewportContext'
 
-const App = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps }) => {
   return (
     <ViewportProvider>
       <Component {...pageProps} />

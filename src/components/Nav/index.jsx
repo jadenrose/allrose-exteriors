@@ -1,5 +1,4 @@
 import { useViewport } from '@/context/ViewportContext'
-import { Button as ButtonType } from '@/__generated__/graphql'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
@@ -16,7 +15,7 @@ const links = [
   { id: 6, href: '/contact', label: 'contact us' },
 ]
 
-const Nav = ({ cto }: { cto?: ButtonType }) => {
+const Nav = ({ cto }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { pathname } = useRouter()
   const { text: viewport } = useViewport()

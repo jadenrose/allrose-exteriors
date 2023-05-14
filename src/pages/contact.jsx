@@ -1,15 +1,13 @@
 import Layout from '@/components/Layout'
-import { Page } from '@/__generated__/graphql'
-import { GetStaticProps } from 'next'
 import content from '@/data/content'
 
-const Contact = ({ page }: { page: Page }) => {
+const Contact = ({ page }) => {
   if (page) return <Layout {...page} heroStyle="primary" />
 
   return null
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps = async () => {
   return {
     props: { page: content.pages.contact },
   }

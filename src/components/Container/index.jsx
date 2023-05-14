@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import styles from './index.module.scss'
 
-const Container = ({ children }: { children: ReactNode }) => {
+const Container = ({ children }) => {
   return <div className={styles.container}>{children}</div>
 }
 

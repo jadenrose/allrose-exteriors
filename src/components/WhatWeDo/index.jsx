@@ -1,11 +1,9 @@
-import { WhatWeDo } from '@/__generated__/graphql'
 import React from 'react'
 import Container from '../Container'
 import HygraphImage from '../HygraphImage'
 import styles from './index.module.scss'
-import parse from 'html-react-parser'
 
-const WhatWeDo = ({ title, description, items }: WhatWeDo) => {
+const WhatWeDo = ({ title, description, items }) => {
   return (
     <section className={styles.whatWeDo}>
       <Container>

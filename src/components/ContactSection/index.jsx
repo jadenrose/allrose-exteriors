@@ -1,12 +1,11 @@
 import React from 'react'
-import { ContactSection } from '@/__generated__/graphql'
 import styles from './index.module.scss'
 import Container from '../Container'
 import HygraphImage from '../HygraphImage'
 import parse from 'html-react-parser'
 import Link from 'next/link'
 
-const ContactSection = ({ title, items, footer }: ContactSection) => {
+const ContactSection = ({ title, items, footer }) => {
   return (
     <section className={styles.contactSection}>
       <Container>

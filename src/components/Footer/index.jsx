@@ -1,11 +1,10 @@
-import { Footer } from '@/__generated__/graphql'
 import React from 'react'
 import Container from '../Container'
 import HygraphImage from '../HygraphImage'
 import styles from './index.module.scss'
 import parse from 'html-react-parser'
 
-const Footer = ({ logo, contactInfo, businessHours, serviceArea }: Footer) => {
+const Footer = ({ logo, contactInfo, businessHours, serviceArea }) => {
   return (
     <footer className={styles.footer}>
       <Container>

@@ -1,11 +1,10 @@
-import { BrandingSection } from '@/__generated__/graphql'
 import Link from 'next/link'
 import React from 'react'
 import Container from '../Container'
 import HygraphImage from '../HygraphImage'
 import styles from './index.module.scss'
 
-const BrandingSection = ({ cards }: BrandingSection) => {
+const BrandingSection = ({ cards }) => {
   return (
     <section className={styles.brandingSection}>
       <Container>
