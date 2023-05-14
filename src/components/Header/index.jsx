@@ -1,4 +1,3 @@
-import { Header } from '@/__generated__/graphql'
 import React from 'react'
 import HygraphImage from '../HygraphImage'
 import Link from 'next/link'
