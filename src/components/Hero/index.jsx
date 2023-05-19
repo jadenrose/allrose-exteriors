@@ -27,7 +27,7 @@ const Hero = ({
       </div>
       {backgroundImage && (
         <div className={styles.bgImageWrapper}>
-          <HygraphImage {...backgroundImage} />
+          <HygraphImage {...backgroundImage} style={{ width: '100%' }} />
         </div>
       )}
     </section>
